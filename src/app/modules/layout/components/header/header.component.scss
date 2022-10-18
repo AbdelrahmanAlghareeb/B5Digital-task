@@ -1,0 +1,107 @@
+@import '../../../../../assets/styles/base/typography.scss';
+@import '../../../../../assets/styles/base/colors.scss';
+@import '../../../../../assets/styles/base/global.scss';
+
+header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .left-section,.right-section {
+    display: flex;
+    gap: 33px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .item {
+    @include caption;
+  }
+  a {
+    color: $c2-A;
+    cursor: pointer;
+  }
+  p {
+    color: $c1-A;
+  }
+}
+
+
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  .logo {
+    height: 18px;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    border: 1px solid $c1-D;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 42px;
+    background-color: $c1-H;
+    gap:30px;
+    .categories {
+      .dropdown {
+        @include button;
+        color: $c1-A;
+      }
+    }
+    .divider {
+      width: 20px;
+      height: 0px;
+      border: 1px solid #D1D1D1;
+      transform: rotate(90deg);
+    }
+    input {
+      @include body;
+      all: unset;
+      margin-right: 50px;
+    }
+  }
+  .personal {
+    display: flex;
+    gap:40px;
+    .cart {
+      position: relative;
+      .count {
+        @include h6;
+        background-color: $c4-A;
+        color: $c1-H;
+        position: absolute;
+        bottom: -2px;
+        left: -3px;
+        height: 16px;
+        width: 16px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        text-align: center;
+      }
+    }
+  }
+}
+.filters {
+  background-color: $c1-H;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  gap: 40px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  overflow-x: scroll;
+  @include thin-scroll($c1-E,$c1-D);
+  .dropdown {
+    @include h5;
+    color: $c1-A;
+  }
+  .active {
+    color: $c2-A ;
+    transition: all .3 ease-in-out;
+  }
+}

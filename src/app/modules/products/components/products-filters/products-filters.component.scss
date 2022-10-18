@@ -1,0 +1,30 @@
+@import '../../../../../assets/styles/base/typography.scss';
+@import '../../../../../assets/styles/base/colors.scss';
+@import '../../../../../assets/styles/base/global.scss';
+
+.left-filters {
+  width: 269px;
+  min-width: 269px;
+  h4 {
+    @include h4;
+    color:$c1-A ;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  ul {
+    all: unset;
+    @include body;
+    color:$c2-A ;
+    list-style: none;
+    li {
+      margin-bottom: 12px;
+      margin-top: 0px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+.active {
+  color: $c1-A;
+  transition: all .3 ease-in-out;
+}

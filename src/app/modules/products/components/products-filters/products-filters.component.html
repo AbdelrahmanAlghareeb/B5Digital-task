@@ -1,0 +1,8 @@
+<aside class="left-filters">
+  <h4>Categories</h4>
+  <ul>
+    <li *ngFor="let category of categories$ |async" (click)="getProductsByCategory(category)" [ngClass]="{'active': selectedCategory == category}">
+      {{category}}
+    </li>
+  </ul>
+</aside>

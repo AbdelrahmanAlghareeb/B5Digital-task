@@ -1,0 +1,83 @@
+
+<div class="container">
+  <header class="container">
+    <div class="left-section">
+      <a class="item">Chat with us</a>
+      <div class="item">+420 336 775 664</div>
+      <div class="item">info@freshnesecom.com</div>
+    </div>
+    <div class="right-section">
+      <a class="item">Blog</a>
+      <a class="item">About Us</a>
+      <a class="item">Careers</a>
+    </div>
+  </header>
+  <hr/>
+</div>
+<div class="container">
+  <section class="first-section">
+    <img class="logo" src="../assets/images/FreshnesecomLogo.png"/>
+    <div class="search-bar">
+      <div class="categories">
+        <div class="dropdown" >
+          <button class="dropbtn">
+            <span>
+              All categories
+            </span>
+            <img src="../assets/images/caret-down.svg"/>
+          </button>
+          <!-- <div class="dropdown-content">
+            <a href="#">All categories</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div> -->
+        </div>
+        <!-- <div class="bg-light d-flex pb-2 pl-3 pr-3 pt-2 rounded-lg share-search-wrapper">
+          <div class="align-items-center d-flex flex-grow-1">
+              <i class="fa-2x fa-search fas mr-3 text-black-50"></i>
+              <input type="text" class="flex-grow-1 bg-light border-0" #querySearchElem (input)="usersSearch($event.target.value)" [placeholder]="'TypeOrSearchForMembersAndAccounts' | localize">
+          </div>
+          <a (click)="addEmail(querySearchElem)">
+              <i class="fa-2x fa-plus-circle fas text-black-50" ></i>
+          </a>
+          <div [appClickOutside]="true" [anotherElemSkip]="querySearchElem"  class="bg-white flex-column pb-2 pl-3 pr-3 pt-2 shadow thin-scroll user-search-result w-100">
+              <div class="d-flex mb-3 mt-3 user-item bg-hover-light" *ngFor="let user of filteredUsers;index as i" (click)="addSharingItem(user,i)">
+                  <img class="mr-3 rounded-circle" height="30px" src="../../../../../assets/icons/user-icon.jpg" alt="user-icon.jpg">
+                  <div>
+                      <h5 class="mb-1">{{user?.users?.name}} {{user?.surname}} @ {{user?.tenantName}}</h5>
+                      <p class="m-0">{{user?.emailAAddress}}</p>
+                  </div>
+              </div>
+          </div>
+        </div> -->
+      </div>
+      <span class="divider"></span>
+      <input type="text" (input)="search($event)" placeholder="Search Products, categories ..."/>
+      <img src="../assets/images/search.svg" class="search-icon"/>
+    </div>
+    <div class="personal">
+      <a class="item">
+        <img src="../assets/images/profile.svg"/>
+      </a>
+      <a class="item cart">
+        <span class="count" *ngIf="cart && cart.length">{{cart.length }}</span>
+        <img src="../assets/images/cart.svg"/>
+      </a>
+    </div>
+  </section>
+</div>
+<section class="filters container thin-scroll">
+  <div class="dropdown" *ngFor="let category of categories$ | async">
+    <button class="dropbtn" (click)="getProductsByCategory(category)" [ngClass]="{'active':selectedCategory == category}">
+      <span>
+        {{category}}
+      </span>
+      <img src="../assets/images/caret-down.svg"/>
+    </button>
+    <!-- <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div> -->
+  </div>
+</section>

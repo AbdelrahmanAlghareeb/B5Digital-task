@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/base/typography.scss';
+@import './assets/styles/base/colors.scss';
+@import './assets/styles/base/global.scss';
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+hr {
+  margin: 0;
+  opacity: 0.05;
+  border: 1px solid #151515;
+}
+
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  /* Style The Dropdown Button */
+  .dropbtn {
+    all: unset;
+    border: none;
+    cursor: pointer;
+    gap: 3px;
+    display: flex;
+    cursor: pointer;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      &:hover {
+        background-color: #f1f1f1
+      }
+    }
+  }
+  &:hover .dropdown-content {
+    display: block;
+  }
+  &:hover .dropbtn {
+    color: $c2-A;
+    transition: all .3 ease-in-out;
+  }
+}

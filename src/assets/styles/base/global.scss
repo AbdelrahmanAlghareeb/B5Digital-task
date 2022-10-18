@@ -1,0 +1,26 @@
+@mixin single-line-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin thin-scroll( $handle-bg, $handle-hover-bg,$scroll-width : 5px, $bar-bg: transparent) {
+  &::-webkit-scrollbar {
+    width: $scroll-width;
+    height: $scroll-width;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $bar-bg;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $handle-bg;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $handle-hover-bg;
+  }
+}

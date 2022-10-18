@@ -1,0 +1,68 @@
+@import '../../../../../assets/styles/base/typography.scss';
+@import '../../../../../assets/styles/base/colors.scss';
+@import '../../../../../assets/styles/base/global.scss';
+
+.item {
+  height: 331px;
+  width: 269px;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid $c1-D;
+  .thumbnail {
+    height: 180px;
+    width: 237px;
+    background-color: $c1-H;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 16px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .discount-percentage {
+      position: absolute;
+      top: 12px;
+      left: 20px;
+      color:$c2-A;
+      @include h6;
+      margin: 0;
+    }
+  }
+  .title {
+    @include h5;
+    @include  single-line-text ;
+    color: $c1-A;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  .description {
+    margin-bottom: 16px;
+    @include  single-line-text ;
+  }
+  .price-and-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .price {
+      .current {
+        @include h4;
+        color: $c1-A;
+      }
+      .before-discount {
+        @include h6;
+        text-decoration-line: line-through;
+        color: $c1-C;
+      }
+    }
+    button {
+      @include button;
+      background-color: $c2-A;
+      border: 2px solid $c2-B;
+      border-radius: 12px;
+      color: $c1-J;
+      cursor: pointer;
+      padding: 6.5px 12px;
+    }
+  }
+}

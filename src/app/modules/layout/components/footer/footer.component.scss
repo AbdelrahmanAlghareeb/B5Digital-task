@@ -1,0 +1,31 @@
+@import '../../../../../assets/styles/base/typography.scss';
+@import '../../../../../assets/styles/base/colors.scss';
+@import '../../../../../assets/styles/base/global.scss';
+
+footer {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  .site-map {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .title {
+        margin: 0;
+        @include h4;
+      }
+      .item {
+        @include body;
+        color: $c2-A;
+      }
+    }
+  }
+  .copyright {
+    @include body;
+    color: $c1-A;
+  }
+}

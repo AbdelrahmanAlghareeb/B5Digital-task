@@ -1,0 +1,13 @@
+<section class="container products" >
+  <app-products-filters >
+  </app-products-filters>
+  <div class="list"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="1000"
+    (scrolled)="onScroll($event)"
+  >
+    <app-product-card *ngFor="let product of products" [product]="product">
+    </app-product-card>
+  </div>
+</section>

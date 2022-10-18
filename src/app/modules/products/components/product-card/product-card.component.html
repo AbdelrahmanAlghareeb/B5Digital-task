@@ -1,0 +1,16 @@
+<div class="item" *ngIf="product">
+  <div class="thumbnail">
+    <span class="helper"></span>
+    <img [src]="product.thumbnail" [alt]="product.title">
+    <h6 class="discount-percentage">- {{product.discountPercentage}} %</h6>
+  </div>
+  <h5 class="title">{{product.title}}</h5>
+  <div class="description">{{product.description}}</div>
+  <div class="price-and-actions">
+    <div class="price">
+      <div class="current">{{product.price | priceAfterDiscount : product.discountPercentage}} USD</div>
+      <div class="before-discount">{{product.price  }} USD</div>
+    </div>
+    <button (click)="addToCart(product.id)">{{addToCartButtonText}}</button>
+  </div>
+</div>
